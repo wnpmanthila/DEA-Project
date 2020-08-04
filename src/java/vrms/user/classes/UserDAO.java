@@ -21,8 +21,6 @@ public class UserDAO {
             ps.setString(2, user.getPassword1());
             rs = ps.executeQuery();
             if (rs.next() != false) {
-//                ps.close();
-//                con.close();
                 return rs;
             }
         } catch (ClassNotFoundException | SQLException ex) {
