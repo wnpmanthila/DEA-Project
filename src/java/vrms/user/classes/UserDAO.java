@@ -16,7 +16,7 @@ public class UserDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("SELECT user_name,user_role FROM user WHERE user_name=? AND password=?");
+            PreparedStatement ps = con.prepareStatement("SELECT first_name,user_role FROM user WHERE user_name=? AND password=?");
             ps.setString(1, user.getUser_name());
             ps.setString(2, user.getPassword1());
             rs = ps.executeQuery();

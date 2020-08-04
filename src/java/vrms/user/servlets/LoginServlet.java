@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         if (dao.check(user) != null) {
             try {
                 HttpSession session = request.getSession();
-                session.setAttribute("user_name", dao.check(user).getString("user_name"));
+                session.setAttribute("first_name", dao.check(user).getString("first_name"));
                 session.setAttribute("user_role", dao.check(user).getString("user_role"));
                 RequestDispatcher dispatch = request.getRequestDispatcher("web_content/dashboard.jsp");
                 dispatch.forward(request, response);
@@ -40,8 +40,10 @@ public class LoginServlet extends HttpServlet {
             response.setContentType("text/html");
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Username/Password is Wrong! Please Check Again!');");
-            out.println("location='login.html';");
+//            out.println("location='login.html';");
             out.println("</script>");
+            RequestDispatcher dispatch = request.getRequestDispatcher("web_content/dashboard.jsp");
+            dispatch.forward(request, response);
         }
 
     }
