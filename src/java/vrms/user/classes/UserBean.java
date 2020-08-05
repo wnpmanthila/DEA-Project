@@ -5,7 +5,7 @@ public class UserBean {
     private String first_name;
     private String last_name;
     private String gender;
-    private int phone_no;
+    private String phone_no;
     private String email;
     private String user_name;
     private String user_role;
@@ -36,11 +36,11 @@ public class UserBean {
         this.gender = gender;
     }
 
-    public int getPhone_no() {
+    public String getPhone_no() {
         return phone_no;
     }
 
-    public void setPhone_no(int phone_no) {
+    public void setPhone_no(String phone_no) {
         this.phone_no = phone_no;
     }
 
