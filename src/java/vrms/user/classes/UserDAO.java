@@ -20,9 +20,6 @@ public class UserDAO {
             ps.setString(1, user.getUser_name());
             ps.setString(2, user.getPassword1());
             rs = ps.executeQuery();
-            if (rs.next() != false) {
-                return rs;
-            }
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
