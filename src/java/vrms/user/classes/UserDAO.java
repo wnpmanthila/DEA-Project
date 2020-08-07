@@ -53,4 +53,18 @@ public class UserDAO {
         return result;
     }
 
+    public ResultSet view() {
+        ResultSet result = null;
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("SELECT user_name,first_name,last_name,gender,phone_no,email,user_role FROM user");
+            result = ps.executeQuery();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
 }

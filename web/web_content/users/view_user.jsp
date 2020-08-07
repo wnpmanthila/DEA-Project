@@ -10,14 +10,14 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Add New User</title>
+        <title>View User</title>
 
         <!-- Custom fonts for this template-->
-        <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
         <!-- Custom styles for this template-->
-        <link href="${pageContext.request.contextPath}/css/sb-admin-2.css" rel="stylesheet">
+        <link href="../../css/sb-admin-2.css" rel="stylesheet">
 
     </head>
 
@@ -42,7 +42,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/dashboard.jsp">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -167,7 +167,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
 
-                        <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Car Rental Management System</u></a></h1>
+                        <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Vehicle Rental Management System</u></a></h1>
 
                         <!-- Topbar Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -177,7 +177,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%= session.getAttribute("first_name") %></span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Kavinda Jayasekara</span>
                                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                                 </a>
                             </li>
@@ -206,85 +206,17 @@
                     <div class="container-fluid">
 
                         <!-- Page Heading -->
-                        <h1 class="h3 mb-4 text-gray-700">Add New User</h1>
+                        <h1 class="h3 mb-4 text-gray-700">View User</h1>
 
-                        <!-- Basic Card Example -->
+                        <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold
-                                    text-primary">Fill in the Form to Add a New User</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Users</h6>
                             </div>
                             <div class="card-body">
-
-                                <form method="POST" action="${pageContext.request.contextPath}/AddUserServlet">
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="first_name">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="last_name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Gender</label>
-                                            <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio1" type="radio" name="gender" value="Male">
-                                                <label class="custom-control-label" for="customRadio1">Male</label>
-                                            </div>
-                                            <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio2" type="radio" name="gender" value="Female">
-                                                <label class="custom-control-label" for="customRadio2">Female</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="phone_no">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email Address</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="email" name="email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">User Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="user_name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">User Role</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="user_role">
-                                                <option value="admin">Admin</option>
-                                                <option value="user">User</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Password</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="password" name="password1">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Retype Same Password</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="password" name="password2">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit Entry"> 
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="reset" class="btn btn-info btn-user btn-block" value="Clear Form"> 
-                                        </div>
-                                    </div>               
-                                </form>
-
+                                <div class="table-responsive">
+                                    <jsp:include page="/ViewUserServlet" />
+                                </div>
                             </div>
                         </div>
 
@@ -328,21 +260,21 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/login.html">Logout</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.min.js"></script>
-        <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src="${pageContext.request.contextPath}/js/sb-admin-2.min.js"></script>
+        <script src="../../js/sb-admin-2.min.js"></script>
 
     </body>
 

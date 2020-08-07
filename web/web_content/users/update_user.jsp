@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>View User</title>
+  <title>Update User</title>
 
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -134,9 +135,9 @@
         <div id="collapseUsers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New User</a>
-            <a class="collapse-item" href="">View User</a>
-            <a class="collapse-item" href="">Update User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/new_user.jsp">Add New User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/view_user.jsp">View User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/update_user.jsp">Update User</a>
           </div>
         </div>
       </li>
@@ -166,7 +167,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Vehicle Rental Management System</u></a></h1>
+          <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Car Rental Management System</u></a></h1>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -203,50 +204,90 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
+          
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-700">View User</h1>
-
-           <!-- DataTales Example -->
-           <div class="card shadow mb-4">
+          <h1 class="h3 mb-4 text-gray-700">Update User</h1>
+          
+          <!-- Basic Card Example -->
+          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Fill in the Email to Search and Update a User</h6>
             </div>
             <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>ID No</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>User Role</th>
-                      <th>Phone Number</th>
-                      <th>Email</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>ID No</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>User Role</th>
-                      <th>Phone Number</th>
-                      <th>Email</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Tharindu</td>
-                      <td>KP</td>
-                      <td>Admin</td>
-                      <td>0771234568</td>
-                      <td>thraindukp@gmail.com</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email</label>
+                  <input class="form-control" id="exampleFormControlInput1" type="text">
+                </div>
               </div>
+              <form>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="text">
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Gender</label>
+                    <div class="custom-control custom-radio">
+                      <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
+                      <label class="custom-control-label" for="customRadio1">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
+                      <label class="custom-control-label" for="customRadio2">Female</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="text">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email Address</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">User Role</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Admin</option>
+                        <option>User</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Password</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="password">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Retype Same Password</label>
+                    <input class="form-control" id="exampleFormControlInput1" type="password">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="submit" class="btn btn-success btn-user btn-block" value="Update Entry"> 
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="submit" class="btn btn-danger btn-user btn-block" value="Delete Entry"> 
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="reset" class="btn btn-primary btn-user btn-block" value="Clear Form"> 
+                  </div> 
+                </div>                
+              </form>
+
             </div>
           </div>
 
@@ -290,7 +331,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="${pageContext.request.contextPath}/login.html">Logout</a>
         </div>
       </div>
     </div>

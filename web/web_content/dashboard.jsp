@@ -136,8 +136,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
             <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/new_user.jsp">Add New User</a>
-            <a class="collapse-item" href="">View User</a>
-            <a class="collapse-item" href="">Update User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/view_user.jsp">View User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/update_user.jsp">Update User</a>
           </div>
         </div>
       </li>
@@ -397,7 +397,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="${pageContext.request.contextPath}/login.html">Logout</a>
         </div>
       </div>
     </div>
