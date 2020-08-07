@@ -62,33 +62,34 @@ public class UpdateDeleteUserServlet extends HttpServlet {
                 if (new_user_role != null && !new_user_role.isEmpty()) {
                     user.setUser_role(user_name);
                 }
-                if (new_password1 != null && !new_password1.isEmpty()) {
-                    user.setPassword1(new_password1);
-                }
-                if (new_password2 != null && !new_password2.isEmpty()) {
-                    user.setPassword2(new_password2);
-                }
 
                 if (new_password1.equals(new_password2)) {
-                    if (dao.update(user, user_name) != 0) {
-
-                        response.setContentType("text/html");
-                        out.println("<script type=\"text/javascript\">");
-                        out.println("window.alert('User Updated Successfully!');");
-                        out.println("location='web_content/users/update_user.jsp';");
-                        out.println("</script>");
-
-                    } else {
-                        response.setContentType("text/html");
-                        out.println("<script type=\"text/javascript\">");
-                        out.println("window.alert('User could not be Updated! Try Again!');");
-                        out.println("location='web_content/users/update_user.jsp';");
-                        out.println("</script>");
+                    if (new_password1 != null && !new_password1.isEmpty()) {
+                        user.setPassword1(new_password1);
+                    }
+                    if (new_password2 != null && !new_password2.isEmpty()) {
+                        user.setPassword2(new_password2);
                     }
                 } else {
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
                     out.println("window.alert('Passwords should be the same!');");
+                    out.println("location='web_content/users/update_user.jsp';");
+                    out.println("</script>");
+                }
+
+                if (dao.update(user, user_name) != 0) {
+
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('User Updated Successfully!');");
+                    out.println("location='web_content/users/update_user.jsp';");
+                    out.println("</script>");
+
+                } else {
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('User could not be Updated! Try Again!');");
                     out.println("location='web_content/users/update_user.jsp';");
                     out.println("</script>");
                 }

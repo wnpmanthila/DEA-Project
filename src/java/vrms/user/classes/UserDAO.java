@@ -114,24 +114,23 @@ public class UserDAO {
         return result;
     }
 
-    public void viewSpecific(UserBean user, String uname) {
+    public void viewSpecific(UserBean user, String user_name) {
         try {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM user WHERE uname=?");
-            ps.setString(1, uname);
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM user WHERE user_name=?");
+            ps.setString(1, user_name);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                user.setUser_name("user_name");
-                user.setFirst_name("first_name");
-                user.setLast_name("last_name");
-                user.setGender("gender");
-                user.setPhone_no("phone_no");
-                user.setEmail("email");
-                user.setUser_role("user_role");
-                user.setPassword1("password");
-                user.setPassword2("password");
+                user.setFirst_name(rs.getString("first_name"));
+                user.setLast_name(rs.getString("last_name"));
+                user.setGender(rs.getString("gender"));
+                user.setPhone_no(rs.getString("phone_no"));
+                user.setEmail(rs.getString("email"));
+                user.setUser_role(rs.getString("user_role"));
+                user.setPassword1(rs.getString("password"));
+                user.setPassword2(rs.getString("password"));
                 ps.close();
                 con.close();
             }
