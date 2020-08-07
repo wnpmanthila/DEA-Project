@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Web%20Application%20Development/DEA-Project/web/web_content/users/new_user.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/DEA-Project/src/java/vrms/user/servlets/LoginServlet.java</file>
             <file>file:/D:/Web%20Application%20Development/DEA-Project/src/java/vrms/user/classes/UserDAO.java</file>
+            <file>file:/D:/Web%20Application%20Development/DEA-Project/web/web_content/dashboard.jsp</file>
             <file>file:/D:/Web%20Application%20Development/DEA-Project/src/java/vrms/user/servlets/AddUserServlet.java</file>
         </group>
     </open-files>
