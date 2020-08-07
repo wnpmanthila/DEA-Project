@@ -67,4 +67,77 @@ public class UserDAO {
         return result;
     }
 
+    public int delete(String uname) {
+        int result = 0;
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM usertbl WHERE uname=?");
+            ps.setString(1, uname);
+            int rs = ps.executeUpdate();
+            if (rs == 1) {
+                result = 1;
+            }
+            ps.close();
+            con.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
+    public int update(UserBean user, String uname) {
+        int result = 0;
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("UPDATE user SET first_name=?, last_name=?, gender=?, phone_no=?, email=?, user_role=?, password=? WHERE user_name=?");
+            ps.setString(1, user.getFirst_name());
+            ps.setString(2, user.getLast_name());
+            ps.setString(3, user.getGender());
+            ps.setString(4, user.getPhone_no());
+            ps.setString(5, user.getEmail());
+            ps.setString(6, user.getUser_role());
+            ps.setString(7, user.getPassword1());
+            ps.setString(8, uname);
+            int rs = ps.executeUpdate();
+            if (rs == 1) {
+                result = 1;
+            }
+            ps.close();
+            con.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
+    public void viewSpecific(UserBean user, String uname) {
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM user WHERE uname=?");
+            ps.setString(1, uname);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                user.setUser_name("user_name");
+                user.setFirst_name("first_name");
+                user.setLast_name("last_name");
+                user.setGender("gender");
+                user.setPhone_no("phone_no");
+                user.setEmail("email");
+                user.setUser_role("user_role");
+                user.setPassword1("password");
+                user.setPassword2("password");
+                ps.close();
+                con.close();
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
