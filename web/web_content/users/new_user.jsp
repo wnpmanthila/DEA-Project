@@ -30,7 +30,7 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-car"></i>
                     </div>
@@ -42,7 +42,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/dashboard.jsp">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -59,9 +59,9 @@
                     <div id="collapseInvoice" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Create New Invoice</a>
-                            <a class="collapse-item" href="">View Invoice</a>
-                            <a class="collapse-item" href="">Update Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/new_invoice.jsp">Create New Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/view_invoice.jsp">View Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/update_invoice.jsp">Update Invoice</a>
                         </div>
                     </div>
                 </li>
@@ -177,7 +177,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%= session.getAttribute("first_name") %></span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%= session.getAttribute("first_name")%></span>
                                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                                 </a>
                             </li>
@@ -328,7 +328,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/LogOutServlet">Logout</a>
                     </div>
                 </div>
             </div>

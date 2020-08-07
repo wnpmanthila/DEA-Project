@@ -59,9 +59,9 @@
                     <div id="collapseInvoice" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Create New Invoice</a>
-                            <a class="collapse-item" href="">View Invoice</a>
-                            <a class="collapse-item" href="">Update Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/new_invoice.jsp">Create New Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/view_invoice.jsp">View Invoice</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/update_invoice.jsp">Update Invoice</a>
                         </div>
                     </div>
                 </li>
