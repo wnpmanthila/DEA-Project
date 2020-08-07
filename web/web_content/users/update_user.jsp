@@ -260,6 +260,7 @@
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="userrole" class="m-0 font-weight-bold text-primary">User Role</label>
                                             <select class="form-control" id="userrole" name="user_role">
+                                                <option value="null">None</option>
                                                 <option value="admin">Admin</option>
                                                 <option value="user">User</option>
                                             </select>

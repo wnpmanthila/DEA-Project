@@ -59,8 +59,8 @@ public class UpdateDeleteUserServlet extends HttpServlet {
                 if (new_email != null && !new_email.isEmpty()) {
                     user.setEmail(new_email);
                 }
-                if (new_user_role != null && !new_user_role.isEmpty()) {
-                    user.setUser_role(user_name);
+                if (!new_user_role.equals("null")) {
+                    user.setUser_role(new_user_role);
                 }
 
                 if (new_password1.equals(new_password2)) {

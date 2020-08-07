@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("first_name", result.getString("first_name"));
                 session.setAttribute("user_role", result.getString("user_role"));
+                session.setMaxInactiveInterval(600);
                 RequestDispatcher dispatch = request.getRequestDispatcher("web_content/dashboard.jsp");
                 dispatch.forward(request, response);
             } else {

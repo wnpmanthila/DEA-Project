@@ -167,7 +167,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Vehicle Rental Management System</u></a></h1>
+          <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashhboard.jsp"><u>Vehicle Rental Management System</u></a></h1>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

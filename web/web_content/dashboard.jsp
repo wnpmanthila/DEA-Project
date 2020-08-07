@@ -42,7 +42,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="dashboard.jsp">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -167,7 +167,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
 
-                        <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Vehicle Rental Management System</u></a></h1>
+                        <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Vehicle Rental Management System</u></a></h1>
 
                         <!-- Topbar Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -397,7 +397,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/login.html">Logout</a>
+                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/LogOutServlet">Logout</a>
                     </div>
                 </div>
             </div>
