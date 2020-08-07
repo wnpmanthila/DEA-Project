@@ -67,14 +67,14 @@ public class UserDAO {
         return result;
     }
 
-    public int delete(String uname) {
+    public int delete(String user_name) {
         int result = 0;
         try {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("DELETE FROM usertbl WHERE uname=?");
-            ps.setString(1, uname);
+            PreparedStatement ps = con.prepareStatement("DELETE FROM user WHERE user_name=?");
+            ps.setString(1, user_name);
             int rs = ps.executeUpdate();
             if (rs == 1) {
                 result = 1;

@@ -95,7 +95,7 @@ public class UpdateDeleteUserServlet extends HttpServlet {
 
             } else if (action.equals("Delete")) {
 
-                if (dao.delete(user_name) == 1) {
+                if (dao.delete(user_name) != 0) {
 
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
