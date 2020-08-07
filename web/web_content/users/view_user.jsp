@@ -177,7 +177,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Kavinda Jayasekara</span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%=session.getAttribute("first_name")%></span>
                                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                                 </a>
                             </li>
@@ -215,7 +215,33 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <jsp:include page="/ViewUserServlet" />
+                                    <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>User Name</th>
+                                                <th>User Role</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Gender</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>User Name</th>
+                                                <th>User Role</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Gender</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <jsp:include page="/ViewUserServlet" />
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

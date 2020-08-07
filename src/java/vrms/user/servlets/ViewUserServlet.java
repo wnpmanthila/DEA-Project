@@ -21,26 +21,12 @@ public class ViewUserServlet extends HttpServlet {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.print("<table class=\"table table-bordered\" id=\"dataTable\" width=\"50%\" cellspacing=\"0\">");
-        out.print("<thead>");
-        out.print("<tr>");
-        out.print("<th>User Name</th>" + "<th>User Role</th>" + "<th>First Name</th>" + "<th>Last Name</th>" + "<th>Gender</th>" + "<th>Phone Number</th>" + "<th>Email</th>");
-        out.print("</tr>");
-        out.print("</thead>");
-        out.print("<tfoot>");
-        out.print("<tr>");
-        out.print("<th>User Name</th>" + "<th>User Role</th>" + "<th>First Name</th>" + "<th>Last Name</th>" + "<th>Gender</th>" + "<th>Phone Number</th>" + "<th>Email</th>");
-        out.print("</tr>");
-        out.print("</tfoot>");
-        out.print("<tbody>");
         try {
             UserDAO dao = new UserDAO();
             ResultSet result = dao.view();
             while (result.next()) {
                 out.print("<tr><td>" + result.getString("user_name") + "</td><td>" + result.getString("user_role") + "</td><td>" + result.getString("first_name") + "</td><td>" + result.getString("last_name") + "</td><td>" + result.getString("gender") + "</td><td>" + result.getString("phone_no") + "</td><td>" + result.getString("email") + "</td></tr>");
             }
-            out.print("</tbody>");
-            out.print("</table>");
         } catch (SQLException ex) {
             Logger.getLogger(ViewUserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
