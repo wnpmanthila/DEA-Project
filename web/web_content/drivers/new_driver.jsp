@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,11 @@
   <title>Add New Driver</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../../css/sb-admin-2.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -134,7 +135,7 @@
         <div id="collapseUsers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/new_user.jsp">Add New User</a>
             <a class="collapse-item" href="">View User</a>
             <a class="collapse-item" href="">Update User</a>
           </div>
@@ -166,7 +167,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Car Rental Management System</u></a></h1>
+          <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.jsp"><u>Car Rental Management System</u></a></h1>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -176,7 +177,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Kavinda Jayasekara</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%= session.getAttribute("first_name")%></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
             </li>
@@ -320,7 +321,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">Ã</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
@@ -333,14 +334,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../../js/sb-admin-2.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/sb-admin-2.min.js"></script>
 
 </body>
 
