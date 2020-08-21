@@ -98,8 +98,8 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
                             <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/new_driver.jsp">Add New Driver</a>
-                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp"">View Driver</a>
-                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp"">Update Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp">View Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp">Update Driver</a>
                         </div>
                     </div>
                 </li>
