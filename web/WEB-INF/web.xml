@@ -32,6 +32,10 @@
         <servlet-name>ViewMakeServlet</servlet-name>
         <servlet-class>vrms.invoice.servlets.ViewMakeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DataGatherServlet</servlet-name>
+        <servlet-class>vrms.invoice.servlets.DataGatherServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ViewMakeServlet</servlet-name>
         <url-pattern>/ViewMakeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DataGatherServlet</servlet-name>
+        <url-pattern>/DataGatherServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

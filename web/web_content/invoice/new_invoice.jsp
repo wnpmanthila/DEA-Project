@@ -233,7 +233,7 @@
                                     </div>
                                 </form>
                                 <hr><hr>
-                                <form>
+                                <form name="invoicedata" method="GET" action="${pageContext.request.contextPath}/DataGatherServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
