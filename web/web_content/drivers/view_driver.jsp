@@ -218,11 +218,11 @@
                                     <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>NIC No</th>
+                                                <th>Driving License No</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Gender</th>
-                                                <th>Driving License No</th>
+                                                <th>NIC No</th>
                                                 <th>Phone Number</th>
                                                 <th>Email</th>
                                                 <th>DOB</th>
@@ -231,11 +231,11 @@
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>NIC No</th>
+                                                <th>Driving License No</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Gender</th>
-                                                <th>Driving License No</th>
+                                                <th>NIC No</th>
                                                 <th>Phone Number</th>
                                                 <th>Email</th>
                                                 <th>DOB</th>
@@ -243,17 +243,9 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            <tr>
-                                                <td>981320465V</td>
-                                                <td>Tharindu</td>
-                                                <td>KP</td>
-                                                <td>Male</td>
-                                                <td>253425452345</td>
-                                                <td>0771234568</td>
-                                                <td>thraindukp@gmail.com</td>
-                                                <td>1998/05/12</td>
-                                                <td>Kaluthara</td>
-                                            </tr>
+                                        <tbody>
+                                            <jsp:include page="/ViewDriverServlet" />
+                                        </tbody>
                                         </tbody>
                                     </table>
                                 </div>

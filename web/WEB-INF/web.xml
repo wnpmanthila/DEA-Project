@@ -40,6 +40,10 @@
         <servlet-name>DataGatherServlet</servlet-name>
         <servlet-class>vrms.invoice.servlets.DataGatherServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewDriverServlet</servlet-name>
+        <servlet-class>vrms.driver.servlets.ViewDriverServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>DataGatherServlet</servlet-name>
         <url-pattern>/DataGatherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewDriverServlet</servlet-name>
+        <url-pattern>/ViewDriverServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
