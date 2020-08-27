@@ -215,26 +215,26 @@
                             </div>
                             <div class="card-body">
 
-                                <form>
+                                <form method="POST" action="${pageContext.request.contextPath}/AddDriverServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="first_name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="last_name">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Gender</label>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
+                                                <input class="custom-control-input" id="customRadio1" type="radio" name="gender" value="Male">
                                                 <label class="custom-control-label" for="customRadio1">Male</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
+                                                <input class="custom-control-input" id="customRadio2" type="radio" name="gender" value="Female">
                                                 <label class="custom-control-label" for="customRadio2">Female</label>
                                             </div>
                                         </div>
@@ -242,35 +242,35 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="dl_no">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="phone_no">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email Address</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="email" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date of Birth</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="dob">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlTextarea1" class="m-0 font-weight-bold text-primary">Address</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address">
                                             </textarea>
                                         </div>
                                     </div>  

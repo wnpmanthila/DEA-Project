@@ -39,7 +39,6 @@ public class AddUserServlet extends HttpServlet {
 
         UserDAO dao = new UserDAO();
         
-        String url = request.getServletPath();
 
         if ((password1.equals(password2)) && (dao.insert(user) != null)) {
             PrintWriter out = response.getWriter();
