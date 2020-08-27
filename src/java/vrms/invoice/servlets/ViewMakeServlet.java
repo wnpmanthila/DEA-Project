@@ -18,16 +18,17 @@ public class ViewMakeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String option1 = request.getParameter("option1");
+
         try {
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
 
             InvoiceDAO dao = new InvoiceDAO();
-            ResultSet result = null; //= dao.viewMake();
-            
-            out.print("<select class=\"form-control\" id=\"exampleFormControlSelect1\" name=\"make\" onChange=\"document.invoicedata.submit();\">");
+            ResultSet result = dao.viewModel();
+            out.print("<select class=\"form-control\" id=\"exampleFormControlSelect1\" name=\"make\" onChange=\"location.href='web_content/invoice/new_invoice.jsp?option2='+this.value;\">");
             out.print("<option value=\"null\">Select Make</option>");
-            if (result != null) {
+            if (result.next()) {
                 while (result.next()) {
                     out.print("<option value=" + result.getString("make_id") + ">" + result.getString("name") + "</option>");
                 }

@@ -29,8 +29,7 @@ public class ViewCategoryServlet extends HttpServlet {
 
             InvoiceDAO dao = new InvoiceDAO();
             ResultSet result = dao.viewCategory();
-            
-            out.print("<select class=\"form-control\" id=\"exampleFormControlSelect1\" name=\"category\" onChange=\"document.invoicedata.submit();\">");
+            out.print("<select class=\"form-control\" id=\"exampleFormControlSelect1\" name=\"category\" onChange=\"location.href='web_content/invoice/new_invoice.jsp?option1='+this.value;\">");
             out.print("<option value=\"null\">Select Category</option>");
             if (result != null) {
                 while (result.next()) {
