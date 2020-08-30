@@ -10,6 +10,16 @@ package vrms.customer.classes;
  * @author Kavinda
  */
 public class CustomerBean {
+    
+    private String first_name;
+    private String last_name;
+    private String gender;
+    private String phone_no;
+    private String email;
+    private String nic;
+    private String dl_no;
+    private String dob;
+    private String address;
 
     public String getFirst_name() {
         return first_name;
@@ -82,15 +92,5 @@ public class CustomerBean {
     public void setAddress(String address) {
         this.address = address;
     }
-    
-    private String first_name;
-    private String last_name;
-    private String gender;
-    private String phone_no;
-    private String email;
-    private String nic;
-    private String dl_no;
-    private String dob;
-    private String address;
     
 }

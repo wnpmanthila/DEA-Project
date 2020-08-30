@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/web/web_content/drivers/view_driver.jsp</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/web/web_content/drivers/update_driver.jsp</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/driver/servlets/ViewDriverServlet.java</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/user/servlets/UpdateDeleteUserServlet.java</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/driver/classes/DriverDAO.java</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/driver/servlets/UpdateDeleteDriverServlet.java</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/driver/servlets/AddDriverServlet.java</file>
-            <file>file:/D:/Web%20Application%20Development/Pavani/DEA-Project/src/java/vrms/user/classes/UserDAO.java</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/web/web_content/customers/new_customer.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/driver/classes/DriverDAO.java</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/customer/classes/CustomerBean.java</file>
         </group>
     </open-files>
 </project-private>
