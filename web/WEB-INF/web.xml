@@ -33,8 +33,24 @@
         <servlet-class>vrms.invoice.servlets.ViewMakeServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>AddDriverServlet</servlet-name>
+        <servlet-class>vrms.driver.servlets.AddDriverServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>DataGatherServlet</servlet-name>
         <servlet-class>vrms.invoice.servlets.DataGatherServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewDriverServlet</servlet-name>
+        <servlet-class>vrms.driver.servlets.ViewDriverServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateDeleteDriverServlet</servlet-name>
+        <servlet-class>vrms.driver.servlets.UpdateDeleteDriverServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCustomerServlet</servlet-name>
+        <servlet-class>vrms.customer.servlets.AddCustomerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -69,8 +85,24 @@
         <url-pattern>/ViewMakeServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>AddDriverServlet</servlet-name>
+        <url-pattern>/AddDriverServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>DataGatherServlet</servlet-name>
         <url-pattern>/DataGatherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewDriverServlet</servlet-name>
+        <url-pattern>/ViewDriverServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateDeleteDriverServlet</servlet-name>
+        <url-pattern>/UpdateDeleteDriverServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCustomerServlet</servlet-name>
+        <url-pattern>/AddCustomerServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

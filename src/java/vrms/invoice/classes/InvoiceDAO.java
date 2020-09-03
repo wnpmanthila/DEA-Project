@@ -38,23 +38,24 @@ public class InvoiceDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM category");
+            PreparedStatement ps = con.prepareStatement("SELECT cat_id,type FROM category");
             result = ps.executeQuery();
+            return result;
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(InvoiceDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
     }
     
-    public ResultSet viewMake(int category) {
+    public ResultSet viewModel() {
         ResultSet result = null;
         try {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM make WHERE cat_id=?");
-            ps.setInt(1, category);
+            PreparedStatement ps = con.prepareStatement("SELECT make_id,name FROM make");
             result = ps.executeQuery();
+            return result;
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(InvoiceDAO.class.getName()).log(Level.SEVERE, null, ex);
         }

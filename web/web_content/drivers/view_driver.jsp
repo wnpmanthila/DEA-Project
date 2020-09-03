@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>404</title>
+        <title>View Drivers</title>
 
         <!-- Custom fonts for this template-->
         <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
                 <hr class="sidebar-divider my-0">
 
                 <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
@@ -78,9 +78,9 @@
                     <div id="collapseCustomers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Customer</a>
-                            <a class="collapse-item" href="">View Customer</a>
-                            <a class="collapse-item" href="">Update Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/new_customer.jsp">Add New Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/view_customer.jsp">View Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/update_customer.jsp">Update Customer</a>
                         </div>
                     </div>
                 </li>
@@ -89,7 +89,7 @@
                 <hr class="sidebar-divider">
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDrivers" aria-expanded="true" aria-controls="collapseDrivers">
                         <i class="fas fa-fw fa-id-card"></i>
                         <span>Drivers</span>
@@ -97,9 +97,9 @@
                     <div id="collapseDrivers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Driver</a>
-                            <a class="collapse-item" href="">View Driver</a>
-                            <a class="collapse-item" href="">Update Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/new_driver.jsp">Add New Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp">View Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp">Update Driver</a>
                         </div>
                     </div>
                 </li>
@@ -116,9 +116,9 @@
                     <div id="collapseVehicles" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Vehicle</a>
-                            <a class="collapse-item" href="">View Vehicle</a>
-                            <a class="collapse-item" href="">Update Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/new_vehicle.jsp">Add New Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/view_vehicle.jsp">View Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/update_vehicle.jsp">Update Vehicle</a>
                         </div>
                     </div>
                 </li>
@@ -205,15 +205,52 @@
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
 
-                        <!-- 404 Error Text -->
-                        <div class="text-center">
-                            <div class="error mx-auto" data-text="404">404</div>
-                            <p class="lead text-gray-800 mb-5">Page Not Found</p>
-                            <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                            <a href="${pageContext.request.contextPath}/web_content/dashboard.jsp">&larr; Back to Dashboard</a>
-                        </div>
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-4 text-gray-700">View Driver</h1>
 
-                        <!-- /.container-fluid -->
+                        <!-- DataTales Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Drivers</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Driving License No</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Gender</th>
+                                                <th>NIC No</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                                <th>DOB</th>
+                                                <th>Address</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Driving License No</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Gender</th>
+                                                <th>NIC No</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                                <th>DOB</th>
+                                                <th>Address</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tbody>
+                                            <jsp:include page="/ViewDriverServlet" />
+                                        </tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- /.container-fluid -->
@@ -266,7 +303,7 @@
         <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="/${pageContext.request.contextPath}vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
         <script src="${pageContext.request.contextPath}/js/sb-admin-2.min.js"></script>
