@@ -4,8 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/web/web_content/customers/new_customer.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/driver/servlets/AddDriverServlet.java</file>
             <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/driver/classes/DriverDAO.java</file>
             <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/customer/classes/CustomerBean.java</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/customer/servlets/AddCustomerServlet.java</file>
+            <file>file:/D:/Web%20Application%20Development/Kavinda/DEA-Project/src/java/vrms/customer/classes/CustomerDAO.java</file>
         </group>
     </open-files>
 </project-private>
