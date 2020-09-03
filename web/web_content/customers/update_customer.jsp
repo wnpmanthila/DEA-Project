@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Update User</title>
+        <title>Update Customer</title>
 
         <!-- Custom fonts for this template-->
         <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -70,7 +70,7 @@
                 <hr class="sidebar-divider">
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomers" aria-expanded="true" aria-controls="collapseCustomers">
                         <i class="fas fa-fw fa-address-book"></i>
                         <span>Customers</span>
@@ -127,7 +127,7 @@
                 <hr class="sidebar-divider">
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="true" aria-controls="collapseUsers">
                         <i class="fas fa-fw fa-user-circle"></i>
                         <span>Users</span>
@@ -206,82 +206,79 @@
                     <div class="container-fluid">
 
                         <!-- Page Heading -->
-                        <h1 class="h3 mb-4 text-gray-700">Update User</h1>
+                        <h1 class="h3 mb-4 text-gray-700">Update Customer</h1>
 
                         <!-- Basic Card Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Fill in the User Name to Update or Delete a User!</h6>
-                                <h6 class="m-0 font-weight-bold text-primary">Keep Blank if you don't wish to change some fields!</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Fill in the NIC to Search and Update a Customer</h6>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteUserServlet">
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="username" class="m-0 font-weight-bold text-primary">User Name</label>
-                                            <input class="form-control" id="username" type="text" name="user_name">
-                                        </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
+                                        <input class="form-control" id="exampleFormControlInput1" type="text">
                                     </div>
-                                    <hr>
+                                </div>
+                                <form>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="firstname" class="m-0 font-weight-bold text-primary">First Name</label>
-                                            <input class="form-control" id="firstname" type="text" name="first_name">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="lastname" class="m-0 font-weight-bold text-primary">Last Name</label>
-                                            <input class="form-control" id="lastname" type="text" name="last_name">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="gender" class="m-0 font-weight-bold text-primary">Gender</label>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Gender</label>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="gender1" type="radio" name="gender" value="Male">
-                                                <label class="custom-control-label" for="gender1">Male</label>
+                                                <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
+                                                <label class="custom-control-label" for="customRadio1">Male</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="gender2" type="radio" name="gender" value="Female">
-                                                <label class="custom-control-label" for="gender2">Female</label>
+                                                <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
+                                                <label class="custom-control-label" for="customRadio2">Female</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="phoneno" class="m-0 font-weight-bold text-primary">Phone Number</label>
-                                            <input class="form-control" id="phoneno" type="text" name="phone_no">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="email" class="m-0 font-weight-bold text-primary">Email Address</label>
-                                            <input class="form-control" id="email" type="email" name="email">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="userrole" class="m-0 font-weight-bold text-primary">User Role</label>
-                                            <select class="form-control" id="userrole" name="user_role">
-                                                <option value="null">None</option>
-                                                <option value="admin">Admin</option>
-                                                <option value="user">User</option>
-                                            </select>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email Address</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="pass1" class="m-0 font-weight-bold text-primary">Password</label>
-                                            <input class="form-control" id="pass1" type="password" name="password1">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="pass2" class="m-0 font-weight-bold text-primary">Retype Same Password</label>
-                                            <input class="form-control" id="pass2" type="password" name="password2">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date of Birth</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="date">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Update"> 
+                                            <label for="exampleFormControlTextarea1" class="m-0 font-weight-bold text-primary">Address</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
+                                            </textarea>
+                                        </div>
+                                    </div>  
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="submit" class="btn btn-success btn-user btn-block" value="Update Entry"> 
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-danger btn-user btn-block" name="action" value="Delete"> 
+                                            <input type="submit" class="btn btn-danger btn-user btn-block" value="Delete Entry"> 
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -290,6 +287,7 @@
                                         </div> 
                                     </div>                
                                 </form>
+
                             </div>
                         </div>
 
@@ -333,7 +331,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/LogOutServlet">Logout</a>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
             </div>

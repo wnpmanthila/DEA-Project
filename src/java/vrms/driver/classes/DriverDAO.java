@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class DriverDAO {
 
-    public int insert(DriverBean driver) throws SQLException {
+    public int insert(DriverBean driver){
         int result = 0;
         try {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
@@ -38,13 +38,13 @@ public class DriverDAO {
             result = ps.executeUpdate();
             ps.close();
             con.close();
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DriverDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
     }
 
-    public ResultSet view() throws SQLException {
+    public ResultSet view(){
         ResultSet result = null;
         try {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
@@ -52,7 +52,7 @@ public class DriverDAO {
             Connection con = DriverManager.getConnection(url, "root", "");
             PreparedStatement ps = con.prepareStatement("SELECT first_name,last_name,gender,phone_no,email,nic,dl_no,dob,address FROM driver");
             result = ps.executeQuery();
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DriverDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
